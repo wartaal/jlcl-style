@@ -6,6 +6,7 @@
 \usepackage{tgheros}
 
 \definecolor{jlclgreen}{RGB}{0,139,0}
+\definecolor{lightgreen}{RGB}{208,255,208}
 
 \newcommand{\authornames}{}
 \newcommand{\authorlastnames}{}
@@ -17,14 +18,15 @@
 %\newcommand{\jlclfirstpage}{i}
 
 % % % This has to be changed
-\newcommand{\jlclvolume}{99}
-\newcommand{\jlclnumber}{0}
-\newcommand{\jlclyear}{0000}
+\newcommand{\jlclvolume}{36}
+\newcommand{\jlclnumber}{2}
+\newcommand{\jlclyear}{2023}
 
 
 \begin{document}
 
 \thispagestyle{empty}
+\pagecolor{lightgreen}%\afterpage{\nopagecolor}
 
 
 \noindent\textcolor{jlclgreen}{\rule{\linewidth}{0.4pt}}
@@ -42,51 +44,38 @@
 \vskip 0.06\paperheight
 
 \begin{center}
-
-%{\fontsize{35}{30}\selectfont \textsf{J\textcolor{gray}{L}\textcolor{jlclgreen}{CL}}}
-%\vskip .4em
-%Journal for Language Technology\\
-%and Computational Linguistics
-
-{\fontfamily{qhv}\fontsize{35}{30}\selectfont \textbf{\textsf{J\hskip 0.08em\textcolor{gray}{L}\hskip 0.08em\textcolor{jlclgreen}{C\hskip 0.08em L}}}}
-\vskip .4em
-{\quattrocento\selectfont
-Journal for Language Technology\\
-and Computational Linguistics
-}
-
+\includegraphics[width=0.9\linewidth]{jlcl_logo_text.eps} 
 \end{center}
 
 %\renewcommand{\familydefault}{\sfdefault}
 %\renewcommand{\familydefault}{\rmdefault}
 
-\vskip 0.15\paperheight
-
-\begin{center}
-{\fontsize{20}{20}\selectfont  Title of the volume}
-\end{center}
-
-\vskip 0.2\paperheight
-
-%{\Large
-%\noindent Edited by
-%\vskip .3em
-%\noindent Adrien Barbaresi, Lothar Lemnitzer
-%}
-
-{\Large
-	\noindent Guest edited by
-	\vskip .3em
-	\noindent NN, NN
-}
-
-\vskip 0.08\paperheight
-
-\noindent \includegraphics[width=0.25\linewidth]{logo-gscl-gross.png} \hfill \textcolor{jlclgreen}{Gesellschaft für Sprachtechnologie \& Computerlinguistik}\\
-
-%\noindent {\fontsize{30}{30}\selectfont \textsf{G\textcolor{gray}{S}\textcolor{jlclgreen}{CL}}} \hfill \textcolor{jlclgreen}{Gesellschaft für Sprachtechnologie \& Computerlinguistik}
-
 
 \vspace*{\fill}
+%\vskip 0.3\paperheight
+
+{\Large
+\noindent Edited by Christian Wartena
+\vskip 1em
+%\noindent 
+}
+
+%{\Large
+%	\noindent Guest edited by
+%	\vskip .3em
+%	\noindent NN, NN
+%}
+
+%\vskip 0.08\paperheight
+
+%\noindent \includegraphics[width=0.25\linewidth]{logo-gscl-gross.png} \hfill \textcolor{jlclgreen}{Gesellschaft für Sprachtechnologie \& Computerlinguistik}\\
+%\noindent {\fontsize{30}{30}\selectfont \textsf{G\textcolor{gray}{S}\textcolor{jlclgreen}{CL}}} \hfill \textcolor{jlclgreen}{Gesellschaft für Sprachtechnologie \& Computerlinguistik}
+\noindent
+\hspace*{-0.4ex}%
+\includegraphics[width=0.45\linewidth]{gscl_de_light.eps} 
+
+
+
+%\vspace*{\fill}
 
 \end{document}
