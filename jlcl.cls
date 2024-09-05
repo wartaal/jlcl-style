@@ -54,7 +54,7 @@
 
 %% Grauwerte
 %\RequirePackage[pdftex]{xcolor}
-\RequirePackage{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 \definecolor{hell}{gray}{0.80}  %% ...
 
 \RequirePackage{lastpage}
@@ -80,8 +80,8 @@
 \lohead[]{\shortarticletitle}
 \rohead[]{}
 \refoot[JLCL]{JLCL}
-\lofoot[JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber) -- \thepage--\pageref{LastPage}]
-       {JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber)}
+\lofoot[JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber) -- \thepage --\pageref{LastPage}]
+{JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber)}
 \lefoot[]{\newstylenums{\LARGE\thepage}}
 \rofoot[]{\newstylenums{\LARGE\thepage}}
 
@@ -92,7 +92,7 @@
 \setkomafont{caption}{\sffamily\small}
 \setkomafont{captionlabel}{\sffamily\bfseries\small}
 
-                                %% evtl. muss bei an diesen Parametern noch etwas gedreht werden
+%% evtl. muss bei an diesen Parametern noch etwas gedreht werden
 \pretolerance=100               %% Textsatz: interner Parameter zur Steuerung des Zeilenumbruchs
 \tolerance 300                  %% 1414 Bewertungsgrenzwert f\"{u}r noch zu akzeptierende schlecht umgebrochene Zeilen
 \hfuzz=0.2pt                    %% Grenze, ab der eine overfull hbox gemeldet wird
