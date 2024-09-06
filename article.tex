@@ -1,24 +1,28 @@
 \documentclass{jlcl}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% information to be completed by the author(s): %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Full author names, separated by commas
-\newcommand{\authornames}{Author One and Author Two}
+%\newcommand{\authornames}{Author One,  Author Two}
+\newcommand{\authornames}{Christian Wartena}
 
 
 %% authors' last names, separated by commas
-\newcommand{\authorlastnames}{One and Two}
+%\newcommand{\authorlastnames}{INSERT AUTHORS' LAST NAMES}
+%\newcommand{\authorlastnames}{One and Two}
+\newcommand{\authorlastnames}{Wartena}
 
 
 %% Full article title, as it appears on the first page of the article
-\newcommand{\articletitle}{Internationalization}
+\newcommand{\articletitle}{Typesetting a Paper for JLCL}
 
 
 %% short article title, as it appears in the header of every second article page
-%\newcommand{\shortarticletitle}{INSERT SHORT ARTICLE TITLE}
-\newcommand{\shortarticletitle}{Internationalization}
+\newcommand{\shortarticletitle}{Typesetting  for JLCL}
 
 
 %% load babel package for the language the article is written in,
@@ -26,66 +30,46 @@
 %% http://tug.ctan.org/tex-archive/macros/latex/required/babel/babel.pdf
 %% for other language options and add languages, if necessary
 \usepackage[utf8]{inputenc}
-\usepackage[LFE,LAE,T1]{fontenc}
-%\usepackage[ngerman,english]{babel}     %% english & ngerman
-\usepackage[ngerman, main=english]{babel} % arabic => problem with sections
+\usepackage[T1]{fontenc}
+\usepackage[german, main=english]{babel} 
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{orcidlink}
 
+
+% % % Bibliography
+\usepackage[natbibapa]{apacite}
 
 % % % % % CUSTOM % % % % %
 %%please add any packages your article needs which are not already included in the class
 %\usepackage{}
-\usepackage{ifxetex}
 
 
-%=======Arabic=======
-%% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.
-\usepackage{arabtex}
 
 
-% % % TODO: add Chinese to test Unicode support
-\ifxetex
-%\usepackage{xeCJK}
-%\setCJKmainfont{SimSun}
-\else
-\usepackage{CJKutf8}
-\fi
 
 
-% % % Bibliography
-\usepackage{apacite}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% information to be completed by the typesetter(s): %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\jlclvolume}{32}
+\newcommand{\jlclvolume}{36}
 
 \newcommand{\jlclnumber}{1}
 
-\newcommand{\jlclyear}{2017}
+\newcommand{\jlclyear}{2022}
 
 \newcommand{\jlclfirstpage}{1}
+
+
 %%==========================================================================================%%
 %%==========================================================================================%%
 
 
-\title{\articletitle}
-\author{AUTHOR NAME\\
-AUTHOR INSTITUTION\\
-\texttt{AUTHOR EMAIL} \and
-AUTHOR 2 NAME\\
-AUTHOR 2 INSTITUTION\\
- \texttt{AUTHOR 2 EMAIL}}
-
-%%==========================================================================================%%
 \begin{document}
 
-% arabtex
-\setarab % choose the language specific conventions
-\vocalize % switch diacritics for short vowels on
-\transtrue % additionally switch on the transliteration
-% \arabtrue % default
 
 
 \setcounter{page}{1}
@@ -95,62 +79,87 @@ AUTHOR 2 INSTITUTION\\
 
 
 %%==========================================================================================%%
-%%           ARTICLE                                                                        %%
+%%           ARTICLE                                                                                                                                                                                                         %%
 %%==========================================================================================%%
 
 % to change language for babel package in the course of the article:
-%\selectlanguage{english}
+%\selectlanguage{german}
 
 \section*{Abstract}
-This article runs a series of tests to check internationalization and compatibility issues in the JLCL class.
+This article gives an example how to typeset a paper for \textsc{jlcl} using \LaTeX
 
 
 
-\section{Arabic}
+\section{Introduction}
 
-\subsection{The Alphabet}
+The preferred way for preparing a paper for submission to \textsc{jlcl} is using \LaTeX with the \textsc{jlcl} document class. The easiest way to use this class and to format a paper is by copying the header of the source file of this document and use the examples for affiliations, figures, tables and citations given below.
 
-%The Arabic alphabet has 29 letters including the Hamza (\textRL{ء}), consonants and three long vowels (\textAR{ا، و، ي}).
-%The short vowels or vowel signs are not part of alphabet but they are merely oral.
-%Along with the three short vowels (\textRL{ـَ ـُ ـِ}), the Arabic script has other phonetic symbols, together known as diacritic marks.
-%Diacritics are sound symbols represented as strokes that are placed above or below the letter.
+\section{Names and Affiliations}
 
-% % % solution found on http://tex.stackexchange.com/questions/141832/babel-arabic-changes-enumeration-level
-This is a test: \RL{b.hr lw.t}
+\textsc{jlcl} uses a double blind review procedure. Therefore submissions should not contain names of the authors and other information that would immediately reveal the identity of the authors.  In the final copy author names and affiliations can be inserted as in this example document.
 
-\begin{RLtext}'imtala'ati al-_dAkiraTu al-'iliktrUniyyaTu bi-mo`.tayAtiN `a^swA'iyyaTiN\end{RLtext}
+\section{Figures and Tables}
 
-
-\section{Chinese}
-
-\subsection{Test}
-
-\ifxetex
-does not currently work with XeTeX.
-%文章内容。 % % does not work
-\else
-\begin{CJK*}{UTF8}{gbsn}
-文章内容。
-%\clearpage
-\end{CJK*}
-\fi
-
-
-\section{Figures}
+The caption of a figure should be below the figure (see Figure \ref{fig:modelclone} for an example). The caption of a table should be below the table.  A table should have horizontal rules on the top and bottom and one between the heading and the first row. Avoid vertical rules as much as possible. An example of a table is Table \ref{tab:numberOfPapers}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{Amiga_A1000.jpg}
-\caption{Amiga A1000 on display at the Mus\'{e}e Bolo (Lausanne), Wikimedia user Rama \newline https://commons.wikimedia.org/wiki/File:Amiga\_A1000\_IMG\_4277.jpg}
+\includegraphics[width=0.5\textwidth]{Example_fig.jpg}
+\label{fig:modelclone}
+\caption{Example of a figure (Figure 1 from \citealp{aggarwal-zesch-2022-bye}) }
 \end{figure}
 
+\begin{table}[htb]
+\centering
+\caption{Number of issues and papers in \textsc{jlcl} between 2010 and 2015 as an example of formatting a table.}
+\label{tab:numberOfPapers}
+\begin{tabular}{rrr}
+\toprule
+year & \#issues  & \#research papers \\
+\midrule
+2010 & 1 & 5 \\
+2011 & 2 & 24 \\
+2012 & 2 & 9\\
+2013 & 2 & 12\\
+2014 & 2 & 11 \\
+2015 & 1 & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
-\nocite{*}
+
+
+
+
+\section{References}
+
+We strongly recommend to use Bib\!\TeX\ to manage references and citations. Bib\!\TeX\  takes care of the correct formatting of the entries in the reference list, but authors are responsible for entering the complete and correct metadata for each reference in the \texttt{.bib}-file.
+
+You can use the \texttt{\textbackslash citep} command to insert author names and year in parentheses in the text. This is an example for citing some papers on various forms of segmentation published in \textsc{jlcl}
+\citep{Riedl_Biemann_2012, Jurish_Würzner_2013, Sidarenka_Peldszus_Stede_2015}.
+Use the command  \texttt{\textbackslash citet} if the author names are part of the sentence and only the year has to be put in parentheses, e.g.\ if we want to say that \citet{Jurish_Würzner_2013} published a paper in \textsc{jlcl}. If no parentheses should be inserted, the command \texttt{\textbackslash citealp}  can be used.
+
+
+
+
+%https://ctan.math.illinois.edu/macros/latex/contrib/apacite/apacite.pdf
+
 \bibliographystyle{apacite}
 \bibliography{references}
 
-%\printbibliography
+\clearpage
 
+
+
+\noindent \textbf{Correspondence}
+
+\hspace{12pt}
+
+\noindent Christian Wartena  \orcidlink{0000-0001-5483-1529}\\[0.5\baselineskip]
+Hochschule Hannover \\
+Data|H Institute for Applied Data Science\\ 
+Hannover, Germany\\
+\href{mailto: christian.wartena@hs-hannover.de}{christian.wartena@hs-hannover.de}
 
 \end{document}
